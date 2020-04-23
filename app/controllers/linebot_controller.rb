@@ -108,6 +108,7 @@ class LinebotController < ApplicationController
         end
       }
 
+
       head :ok
     end
   end
