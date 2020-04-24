@@ -26,10 +26,10 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          if event.message['text'] == "aa"
+          if event.message['text'].include?("おばさん")
             message = {
                 type: 'text',
-                text: "seikou!!!!"
+                text: "誰がババアじゃクソガキ！殺すぞ"
             }
           else
             message = {
