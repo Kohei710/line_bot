@@ -29,12 +29,17 @@ class LinebotController < ApplicationController
           if event.message['text'].include?("おばさん")
             message = {
                 type: 'text',
-                text: "誰がババアじゃクソガキ！殺すぞ"
+                text: "お姉さんじゃハゲ"
             }
-          else
+          elsif event.message['text'].include?("ババア")
             message = {
                 type: 'text',
-                text: event.message['text']
+                text: "誰がババアじゃクソガキ！殺すぞ"
+            }
+          elsif event.message['text'].include?("年寄り")
+            message = {
+                type: 'text',
+                text: "けつの穴から手突っ込んで顎ガタガタ言わせたろか"
             }
           end
 
