@@ -41,6 +41,11 @@ class LinebotController < ApplicationController
                 type: 'text',
                 text: "けつの穴から手突っ込んで顎ガタガタ言わせたろか"
             }
+          else
+            message = {
+                type: 'text',
+                text: event.message['text']
+            }
           end
 
           client.reply_message(event['replyToken'], message)
