@@ -44,7 +44,7 @@ class LinebotController < ApplicationController
           else
             message = {
                 type: 'text',
-                text: event.message['text']
+                text: event
             }
           end
 
